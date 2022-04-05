@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    margin: 0px auto;
+    padding: 20px;
+    width: 1100px;
+    max-width: 1300px;
+    background-color: #E9E9EB;
+}
+
+.personal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal_info {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    height: 300px;
+    border: 5px solid #3D4450;
+    border-radius: 60px;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    color: #3D4450
+}
+
+.name {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.name h1 {
+    margin-top: 30px;
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.name h2 {
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 11px;
+}
+
+.profession {
+    background-color: #E9E9EB;
+    position: absolute;
+    bottom: -30px;
+    left: 23%;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.contact_informations {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact_container {
+    display: flex;
+}
+
+.contact_detail {
+    width: 275px;
+}
+
+.contact_detail a {
+    text-decoration: none;
+    color: #3D4450;
+}
+
+.justify_right {
+    text-align: right;
+}
+
+.icon {
+    max-width: 10%;
+    float: left;
+    margin-right: 10px;
+}
+
+.photo {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #3D4450;
+    background-image:
+        url("./img/profile\ photo.png");
+    background-position: center;
+    background-size: 110%;
+}
+
+.about_me {
+    margin-top: 20px;
+    height: 100px;
+    background-color: #3D4450;
+    border-radius: 30px;
+    color: #D5D4D9;
+}
+
+.about_me p {
+    padding-left: 20px;
+}
+
+.heading {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.edu_and_work {
+    margin-top: 20px;
+    background-color: #D5D4D9;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.education,
+.work_experience {
+    /* background-color: rosybrown; */
+    width: 510px;
+    color: #3D4450;
+}
+
+.education,
+.learning_strategies {
+    padding-right: 20px;
+    border-right: 1px solid #3D4450;
+}
+
+.work_experience .heading,
+.resources .heading {
+    padding: 0;
+}
+
+.work_experience {
+    padding-right: 20px;
+}
+
+.university {
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.university div,
+.work {
+    padding-top: 20px;
+}
+
+.university_field,
+.work_name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.work_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work_duties {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.learning_strategies,
+.resources {
+    width: 510px;
+    color: #3D4450;
+}
+
+.strategies_and_resources {
+    margin-top: 20px;
+    background-color: #D5D4D9;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.learning_strategies li {
+    padding-left: 20px;
+}
+
+.learning_strategies li,
+.resources li {
+    padding-bottom: 2px;
+}
+
+.resources .heading {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.learning_strategies ul,
+.resources ul {
+    list-style-type: none;
+}
