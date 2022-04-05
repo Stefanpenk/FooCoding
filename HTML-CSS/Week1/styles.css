@@ -104,7 +104,7 @@
 
 .about_me {
     margin-top: 20px;
-    height: 100px;
+    height: 120px;
     background-color: #3D4450;
     border-radius: 30px;
     color: #D5D4D9;
@@ -132,7 +132,6 @@
 
 .education,
 .work_experience {
-    /* background-color: rosybrown; */
     width: 510px;
     color: #3D4450;
 }
