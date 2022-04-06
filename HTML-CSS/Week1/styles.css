@@ -27,11 +27,11 @@
 
 .title {
     height: 300px;
-    border: 4px solid #3D4450;
+    border: 4px solid #9C8657;
     border-radius: 30px;
     font-family: 'Quicksand', sans-serif;
     position: relative;
-    color: #3D4450
+    color: #9C8657
 }
 
 .name {
@@ -66,6 +66,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #677A9C;
 }
 
 .contact_container {
@@ -78,7 +79,7 @@
 
 .contact_detail a {
     text-decoration: none;
-    color: #3D4450;
+    color: #677A9C;
 }
 
 .justify_right {
@@ -89,13 +90,14 @@
     max-width: 10%;
     float: left;
     margin-right: 10px;
+    filter: invert(50%) sepia(15%) saturate(881%) hue-rotate(180deg) brightness(91%) contrast(85%);
 }
 
 .photo {
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    background-color: #3D4450;
+    background-color: #677A9C;
     background-image:
         url("./img/profile\ photo.png");
     background-position: center;
@@ -105,7 +107,7 @@
 .about_me {
     margin-top: 20px;
     height: 120px;
-    background-color: #3D4450;
+    background-color: #677A9C;
     border-radius: 20px;
     color: #D5D4D9;
 }
@@ -142,13 +144,13 @@
 .education,
 .work_experience {
     width: 510px;
-    color: #3D4450;
+    color: #677A9C;
 }
 
 .education,
 .learning_strategies {
     padding-right: 20px;
-    border-right: 1px solid #3D4450;
+    border-right: 1px solid #677A9C;
 }
 
 .work_experience .heading,
@@ -190,7 +192,7 @@
 .learning_strategies,
 .resources {
     width: 510px;
-    color: #3D4450;
+    color: #677A9C;
 }
 
 .learning_strategies li {
