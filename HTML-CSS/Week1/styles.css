@@ -27,8 +27,8 @@
 
 .title {
     height: 300px;
-    border: 5px solid #3D4450;
-    border-radius: 60px;
+    border: 4px solid #3D4450;
+    border-radius: 30px;
     font-family: 'Quicksand', sans-serif;
     position: relative;
     color: #3D4450
@@ -106,7 +106,7 @@
     margin-top: 20px;
     height: 120px;
     background-color: #3D4450;
-    border-radius: 30px;
+    border-radius: 20px;
     color: #D5D4D9;
 }
 
@@ -122,12 +122,21 @@
     text-transform: uppercase;
 }
 
-.edu_and_work {
+.edu_and_work,
+.strategies_and_resources {
     margin-top: 20px;
     background-color: #D5D4D9;
-    height: 500px;
     display: flex;
     justify-content: space-between;
+    border-radius: 20px;
+}
+
+.edu_and_work {
+    height: 500px;
+}
+
+.strategies_and_resources {
+    height: 200px;
 }
 
 .education,
@@ -182,14 +191,6 @@
 .resources {
     width: 510px;
     color: #3D4450;
-}
-
-.strategies_and_resources {
-    margin-top: 20px;
-    background-color: #D5D4D9;
-    height: 200px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .learning_strategies li {
