@@ -52,13 +52,19 @@
 }
 
 .profession {
-    background-color: #E9E9EB;
+    width: 260px;
     position: absolute;
-    bottom: -30px;
-    left: 23%;
-    text-transform: uppercase;
+    top: 101%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E9E9EB;
+}
+
+.profession h3 {
     font-size: 20px;
     padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .contact_informations {
