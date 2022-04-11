@@ -7,105 +7,91 @@
 
 .container {
     margin: 0px auto;
-    padding: 20px;
-    width: 1100px;
+    /* padding: 20px; */
+    width: 100vw;
     max-width: 1300px;
     background-color: #E9E9EB;
 }
 
 h4.heading {
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 5px;
-    font-size: 25px;
+    padding: 0.35rem 1.25rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
 }
 
 /* HEADER */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
 }
 
 .bio {
-    width: 550px;
+    width: 50vw;
+    height: 300px;
+    border: 4px solid #9C8657;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    position: relative;
+    overflow: hidden;
+    z-index: 2;
 }
 
-h1,
-h2 {
+h1 {
+    margin-top: 85px;
+    width: 100%;
     font-family: 'Quicksand', sans-serif;
     color: #9C8657;
     text-transform: uppercase;
     text-align: center;
-}
-
-h1 {
-    position: absolute;
-    padding-top: 80px;
-    width: 400px;
-    height: 300px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 4px solid #9C8657;
-    border-radius: 30px;
-    font-size: 70px;
+    font-size: 5rem;
     font-weight: 300;
-    line-height: 60px;
-}
-
-h1 span {
-    display: block;
-    font-size: 80px;
-    font-weight: 600;
-    letter-spacing: 12px;
-}
-
-h2 {
-    position: absolute;
-    width: 260px;
-    top: 66%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #E9E9EB;
-    font-size: 20px;
-    padding: 10px;
 }
 
 .contact {
-    position: absolute;
-    bottom: 0;
-    height: 100px;
+    width: 100%;
     display: flex;
+    align-items: flex-end;
     color: #677A9C;
-    flex-wrap: wrap;
+    z-index: 2;
 }
 
 .contact_detail {
-    width: 275px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact_detail a {
-    text-decoration: none;
-    color: #677A9C;
+.contact_detail p {
+    display: none;
+    text-align: center;
+    /* width: 100%; */
+    background-color: #cfcfd3;
 }
 
-.justify_right {
-    text-align: right;
+.contact_detail:hover {
+    width: 40%;
+    background-color: #cfcfd3;
 }
 
-.icon {
-    max-width: 10%;
-    float: left;
-    margin-right: 10px;
+.contact_detail:hover p {
+    display: block;
+    line-height: 2rem;
+}
+
+img.icon {
+    order: 1;
+    width: 25%;
     filter: invert(50%) sepia(15%) saturate(881%) hue-rotate(180deg) brightness(91%) contrast(85%);
 }
 
 .photo {
+    position: relative;
     width: 450px;
     height: 450px;
     border-radius: 50%;
@@ -114,15 +100,49 @@ h2 {
         url("./img/profile\ photo.png");
     background-position: center;
     background-size: 110%;
+    /* box-shadow: -150px 50px #FFEAC3; */
+}
+
+.photo::after {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: -15%;
+    left: -21%;
+    content: "";
+    text-align: center;
+    line-height: 100px;
+    color: #677A9C;
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    transform: rotate(90deg);
+    transform-origin: 130% -30%;
+    transition: 1.5s;
+}
+
+.photo:hover::after {
+    width: 200px;
+    height: 100px;
+    content: "That´s me";
+    transform: rotate(0deg);
+}
+
+.photo:hover {
+    cursor: pointer;
+    background-image:
+        url("./img/profile_color.png");
 }
 
 /* ABOUT ME */
 .about_me {
-    margin-top: 20px;
+    margin-bottom: 1.3rem;
+    width: 90vw;
     height: 120px;
     background-color: #677A9C;
-    border-radius: 20px;
+    border-radius: 1.3rem;
     color: #D5D4D9;
+    align-self: flex-end;
 }
 
 .about_me p {
