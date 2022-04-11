@@ -7,7 +7,6 @@
 
 .container {
     margin: 0px auto;
-    /* padding: 20px; */
     width: 100vw;
     max-width: 1300px;
     background-color: #E9E9EB;
@@ -21,39 +20,57 @@ h4.heading {
 
 /* HEADER */
 header {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0%;
+    height: 800px;
 }
 
-.bio {
+.name {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
     width: 50vw;
-    height: 300px;
+    height: 250px;
     border: 4px solid #9C8657;
     border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    z-index: 2;
+    z-index: 3;
 }
 
-h1 {
-    margin-top: 85px;
-    width: 100%;
+h1,
+h2 {
+    position: absolute;
+    left: 50%;
     font-family: 'Quicksand', sans-serif;
     color: #9C8657;
     text-transform: uppercase;
     text-align: center;
-    font-size: 5rem;
     font-weight: 300;
 }
 
+h1 {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    font-size: 5rem;
+}
+
+h2 {
+    width: 400px;
+    top: -7%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #E9E9EB;
+}
+
 .contact {
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
     display: flex;
     align-items: flex-end;
     color: #677A9C;
@@ -70,13 +87,13 @@ h1 {
 .contact_detail p {
     display: none;
     text-align: center;
-    /* width: 100%; */
-    background-color: #cfcfd3;
+    background-color: hsl(240, 5%, 89%);
 }
 
 .contact_detail:hover {
+    cursor: pointer;
     width: 40%;
-    background-color: #cfcfd3;
+    background-color: hsl(240, 5%, 89%);
 }
 
 .contact_detail:hover p {
@@ -91,16 +108,20 @@ img.icon {
 }
 
 .photo {
-    position: relative;
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 650px;
+    border-radius: 50px;
     background-color: #677A9C;
     background-image:
         url("./img/profile\ photo.png");
-    background-position: center;
-    background-size: 110%;
-    /* box-shadow: -150px 50px #FFEAC3; */
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    z-index: 1;
 }
 
 .photo::after {
@@ -121,6 +142,7 @@ img.icon {
     transition: 1.5s;
 }
 
+/* PHOTO */
 .photo:hover::after {
     width: 200px;
     height: 100px;
@@ -136,17 +158,23 @@ img.icon {
 
 /* ABOUT ME */
 .about_me {
-    margin-bottom: 1.3rem;
-    width: 90vw;
-    height: 120px;
-    background-color: #677A9C;
-    border-radius: 1.3rem;
-    color: #D5D4D9;
-    align-self: flex-end;
+    padding-top: 110px;
+    position: absolute;
+    top: 54%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 350px;
+    background-color: hsla(218, 21%, 51%, 0.433);
+    border-radius: 30px;
+    color: #9C8657;
+    z-index: 2;
 }
 
 .about_me p {
     padding-left: 20px;
+    width: 420px;
+    text-align: justify;
 }
 
 /* MAIN */
