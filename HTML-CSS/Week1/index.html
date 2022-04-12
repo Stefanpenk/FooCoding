@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quicksand:wght@300;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quicksand:wght@300;600&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
     <title>CV Stefan Penk</title>
 </head>
@@ -52,96 +50,99 @@
                 </div>
             </section>
         </header>
-        <main>
-            <section class="education">
-                <h4 class="heading">Education</h4>
-                <div class="university">
-                    <div>
-                        <p class="university_field">Faculty of architecture - master studies</p>
-                        <p class="university_name">Gdansk University of Technology</p>
-                    </div>
-                    <p class="year">2015-2018</p>
+        <figure class="hobby">
+            <div id="boxing" class="hobby_img boxing"></div>
+            <div id="travel" class="hobby_img travel"></div>
+            <div id="cooking" class="hobby_img cooking"></div>
+            <div id="drawing" class="hobby_img drawing"></div>
+        </figure>
+        <section class="education">
+            <h4 class="heading">education</h4>
+            <ul>
+                <li>
+                    <div>Faculty of architecture - master studies</div>
+                    <div>2015-2018</div>
+                    <div>Gdansk University of Technology, Poland</div>
+                </li>
+                <li>
+                    <div>Faculty of architecture - bachelor studies</div>
+                    <div>2010-2015</div>
+                    <div>Gdansk University of Technology, Poland</div>
+                </li>
+            </ul>
+        </section>
+        <section class="work">
+            <h4 class="heading">work experience</h4>
+            <ul class="work_container">
+                <li class="work_list">
+                    <div>HomeMaid AB</div>
+                    <div>05.2019-11.2021</div>
+                    <div>service assistant</div>
+                    <div></div>
+                </li>
+                <li class="work_list">
+                    <div>Prefabriken AB</div>
+                    <div>01.2019-05.2019</div>
+                    <div>architect</div>
+                    <ul>
+                        <li>working on a field with construction</li>
+                        <li>preparing 2D drawings in AutoCAD</li>
+                        <li>prepraing 3D visualisations in SketchUP + Vray</li>
+                        <li>prepraing 3D visualisations in Lumion</li>
+                    </ul>
+                </li>
+                <li class="work_list">
+                    <div>APP Krystian Rassmus</div>
+                    <div>08.2015-12.2018</div>
+                    <div>interior designer</div>
+                    <ul>
+                        <li>projecting residential architecture</li>
+                        <li>interior design (cafee, restaurants, shops, housing)</li>
+                        <li>projecting furnitures (kitchen,
+                            living room, bedroom)</li>
+                        <li>talking with investors, contractors of work</li>
+                        <li>preparing 2D drawings in AutoCAD, 3D visualisations in SketchUP + Vray</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <h4 class="heading">References</h4>
+            <div class="references_container">
+                <div class="reference_container">
+                    <h5>LEARNING STRATEGIES</h5>
+                    <ul>
+                        <li>Spaced Practise
+                        </li>
+                        <li>Retrieval Practice</li>
+                        <li>Elaboration
+                        </li>
+                        <li>Interleaving
+                        </li>
+                        <li>Concrete Examples
+                        </li>
+                        <li>Dual Coding
+                        </li>
+                    </ul>
                 </div>
-                <div class="university">
-                    <div>
-                        <p class="university_field">Faculty of architecture - bachelor studies</p>
-                        <p class="university_name">Gdansk University of Technology</p>
-                    </div>
-                    <p class="year">2010-2015</p>
+                <div class="reference_container">
+                    <h5>HELPFUL PLATFORMS</h5>
+                    <ul>
+                        <li>https://developer.mozilla.org
+                        </li>
+                        <li>https://www.w3schools.com
+                        </li>
+                        <li>https://css-tricks.com/almanac/properties/
+                        </li>
+                        <li>https://cssreference.io
+                        </li>
+                        <li>https://frontendmasters.com/guides/front-end-handbook/2018/
+                        </li>
+                        <li>https://stackoverflow.com</li>
+                    </ul>
                 </div>
-            </section>
-            <section class="work_experience">
-                <h4 class="heading">Work Experience</h4>
-                <div class="work">
-                    <div class="work_header">
-                        <p class="work_name">HomeMaid AB</p>
-                        <p class="year">05.2019-11.2021</p>
-                    </div>
-                    <div class="work_paragraphs">
-                        <p class="work_title">service assistant</p>
-                        <p class="work_duties"></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <div class="work_header">
-                        <p class="work_name">Prefabriken AB</p>
-                        <p class="year">01.2019-05.2019</p>
-                    </div>
-                    <div class="work_paragraphs">
-                        <p class="work_title">architect</p>
-                        <ul class="work_duties">
-                            <li>working on a field with construction</li>
-                            <li>preparing 2D drawings in AutoCAD</li>
-                            <li>prepraing 3D visualisations in SketchUP + Vray</li>
-                            <li>prepraing 3D visualisations in Lumion</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work">
-                    <div class="work_header">
-                        <p class="work_name">APP Krystian Rassmus</p>
-                        <p class="year">08.2015-12.2018</p>
-                    </div>
-                    <div class="work_paragraphs">
-
-                        <p class="work_title">interior designer</p>
-                        <ul class="work_duties">
-                            <li>projecting residential architecture</li>
-                            <li>interior design (cafee, restaurants, shops, housing)</li>
-                            <li>projecting furnitures (kitchen,
-                                living room, bedroom)</li>
-                            <li>talking with investors, contractors of work</li>
-                            <li>preparing 2D drawings in AutoCAD, 3D visualisations in SketchUP + Vray</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <div class="strategies_and_resources">
-            <div class="learning_strategies">
-                <h4 class="heading">learning strategies</h4>
-                <ul>
-                    <li>Spaced Practise</li>
-                    <li>Retrieval Practice</li>
-                    <li>Elaboration</li>
-                    <li>Interleaving</li>
-                    <li>Concrete Examples</li>
-                    <li>Dual Coding</li>
-                </ul>
             </div>
-            <div class="resources">
-                <h4 class="heading">Helpful platforms</h4>
-                <ul>
-                    <li>https://developer.mozilla.org</li>
-                    <li>https://www.w3schools.com</li>
-                    <li>https://css-tricks.com/almanac/properties/</li>
-                    <li>https://cssreference.io</li>
-                    <li>https://frontendmasters.com/guides/front-end-handbook/2018/</li>
-                    <li>https://stackoverflow.com</li>
-                </ul>
-            </div>
-        </div>
-
+        </footer>
     </div>
 </body>
 
