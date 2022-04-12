@@ -31,7 +31,7 @@ header {
     top: 30%;
     left: 30%;
     transform: translate(-50%, -50%);
-    width: 50vw;
+    width: 55%;
     height: 250px;
     border: 4px solid #9C8657;
     border-radius: 30px;
@@ -65,47 +65,25 @@ h2 {
     background-color: #E9E9EB;
 }
 
-/* CONTACT */
-.contact {
+/* ABOUT ME */
+.about_me {
+    padding-top: 110px;
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    display: flex;
-    align-items: flex-end;
-    color: #677A9C;
+    top: 54%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    height: 350px;
+    background-color: hsla(218, 21%, 51%, 0.433);
+    border-radius: 30px;
+    color: white;
     z-index: 2;
 }
 
-.contact_detail {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact_detail p {
-    display: none;
-    text-align: center;
-    background-color: hsl(240, 5%, 89%);
-}
-
-.contact_detail:hover {
-    cursor: pointer;
-    width: 40%;
-    background-color: hsl(240, 5%, 89%);
-}
-
-.contact_detail:hover p {
-    display: block;
-    line-height: 2rem;
-}
-
-img.icon {
-    order: 1;
-    width: 25%;
-    filter: invert(50%) sepia(15%) saturate(881%) hue-rotate(180deg) brightness(91%) contrast(85%);
+.about_me p {
+    padding-left: 20px;
+    width: 420px;
+    text-align: justify;
 }
 
 /* PHOTO */
@@ -158,25 +136,47 @@ img.icon {
         url("./img/profile_color.png");
 }
 
-/* ABOUT ME */
-.about_me {
-    padding-top: 110px;
+/* CONTACT */
+.contact {
     position: absolute;
-    top: 54%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    width: 50vw;
-    height: 350px;
-    background-color: hsla(218, 21%, 51%, 0.433);
-    border-radius: 30px;
-    color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    display: flex;
+    align-items: flex-end;
+    color: #677A9C;
     z-index: 2;
 }
 
-.about_me p {
-    padding-left: 20px;
-    width: 420px;
-    text-align: justify;
+.contact_detail {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_detail p {
+    display: none;
+    text-align: center;
+    background-color: hsl(240, 5%, 89%);
+}
+
+.contact_detail:hover {
+    cursor: pointer;
+    width: 40%;
+    background-color: hsl(240, 5%, 89%);
+}
+
+.contact_detail:hover p {
+    display: block;
+    line-height: 2rem;
+}
+
+img.icon {
+    order: 1;
+    width: 25%;
+    filter: invert(50%) sepia(15%) saturate(881%) hue-rotate(180deg) brightness(91%) contrast(85%);
 }
 
 /* HOBBY */
