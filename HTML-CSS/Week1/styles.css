@@ -36,7 +36,7 @@ body {
 
 .container {
     margin: 0px auto;
-    width: 100vw;
+    /* width: 100vw; */
     max-width: 1300px;
     background-color: var(--colorBgc);
 }
@@ -179,7 +179,7 @@ button:hover {
 .photo:hover::after {
     width: 200px;
     height: 100px;
-    content: "That´s me";
+    content: "That's me";
     transform: rotate(0deg);
 }
 
@@ -232,6 +232,7 @@ img.icon {
 /* HOBBY */
 .hobby {
     margin-top: 20px;
+    margin-left: 0px;
     position: relative;
     top: 0;
     left: 50%;
