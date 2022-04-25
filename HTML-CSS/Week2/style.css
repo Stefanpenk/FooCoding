@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    border: 2px solid black;
+    font-family: arial;
+}
+
+header h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+li {
+    display: block;
+    width: 22.5vw;
+    list-style: none;
+    box-shadow: 0 0 4px 4px #ddd;
+}
+
+li h3 {
+    display: block;
+    padding: 0 5px;
+    font-size: 25px;
+    line-height: 35px;
+    min-height: 100px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+li img {
+    width: 100%;
+}
+
+section:nth-of-type(1) ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section:nth-of-type(1) ul li {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    height: 400px;
+    margin: 1vw;
+    overflow: hidden;
+}
+
+section:nth-of-type(1) ul li h3 {
+    padding-bottom: 30px;
+}
+
+section:nth-of-type(1) ul li img {
+    display: block;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+section:nth-of-type(1) ul li p {
+    position: absolute;
+    bottom: -250px;
+    left: 0;
+    padding: 10px;
+    min-height: 130px;
+    text-align: justify;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+section:nth-of-type(1) ul li:hover p {
+    bottom: 0;
+}
+
+/* 1st element */
+section:nth-of-type(1) ul li:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: calc(45vw + 2vw);
+}
+
+section:nth-of-type(1) ul li:nth-of-type(1) h3 {
+    flex-basis: 100%;
+    padding-bottom: 0;
+    min-height: 50px;
+    line-height: 50px;
+    z-index: 1;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(1) img {
+    flex-basis: 60%;
+    transition: 0.2s;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(1) p {
+    position: absolute;
+    width: 180px;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    flex-basis: 40%;
+    color: white;
+}
+
+section:nth-of-type(1) ul li:nth-of-type(1) p::before {
+    content: url(/images/arrow\ left.svg);
+    position: absolute;
+    width: 30px;
+    padding: 5px;
+    bottom: 10%;
+    left: -40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #fff;
+}
+
+
+section:nth-of-type(1) ul li:nth-of-type(1):hover p {
+    transform: translateX(-180px);
+}
+
+section:nth-of-type(1) ul li:nth-of-type(1):hover img {
+    transform: scale(1.2);
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: darkgray;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body {
+        background-color: orange;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-color: darkblue;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+}
