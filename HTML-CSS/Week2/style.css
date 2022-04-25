@@ -79,7 +79,7 @@ section ul li p {
 }
 
 p::before {
-    content: url(/images/arrow-up.svg);
+    content: url(./images/arrow-up.svg);
     position: absolute;
     width: 30px;
     padding: 5px;
@@ -115,43 +115,43 @@ section ul li:nth-child(8):before {
     left: -50%;
     z-index: -1;
     transform: scale(1.2);
-    opacity: 0.3;
+    opacity: 0.1;
     animation: backgroundImg 20s linear infinite;
 }
 
 section ul li:nth-child(1):before,
 section ul li:nth-child(8):before {
-    content: url(/images/drone1.png);
+    content: url(./images/drone1.png);
 }
 
 section ul li:nth-child(5):before,
 section ul li:nth-child(12):before {
-    content: url(/images/drone5.png);
+    content: url(./images/drone5.png);
 }
 
 section ul li:nth-child(3):before,
 section ul li:nth-child(10):before {
-    content: url(/images/drone3.png);
+    content: url(./images/drone3.png);
 }
 
 section ul li:nth-child(2):before,
 section ul li:nth-child(9):before {
-    content: url(/images/drone2.png);
+    content: url(./images/drone2.png);
 }
 
 section ul li:nth-child(4):before,
 section ul li:nth-child(11):before {
-    content: url(/images/drone4.png);
+    content: url(./images/drone4.png);
 }
 
 section ul li:nth-child(6):before,
 section ul li:nth-child(13):before {
-    content: url(/images/drone6.png);
+    content: url(./images/drone6.png);
 }
 
 section ul li:nth-child(7):before,
 section ul li:nth-child(14):before {
-    content: url(/images/drone7.png);
+    content: url(./images/drone7.png);
 }
 
 @keyframes backgroundImg {
@@ -165,11 +165,11 @@ section ul li:nth-child(14):before {
     }
 
     13% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
 
     87% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
 
     92% {
@@ -222,7 +222,7 @@ section:nth-of-type(1) ul li:nth-of-type(1) p {
 }
 
 section:nth-of-type(1) ul li:nth-of-type(1) p::before {
-    content: url(/images/arrow\ left.svg);
+    content: url(./images/arrow\ left.svg);
     position: absolute;
     width: 30px;
     padding: 5px;
@@ -278,6 +278,21 @@ section:nth-of-type(2) ul li:nth-of-type(1) {
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
         background-color: darkgray;
+    }
+
+    section:nth-of-type(2) ul {
+        justify-content: space-evenly;
+    }
+
+    section:nth-of-type(2) ul li {
+        flex-basis: calc((100% / 3) - 6%);
+        margin: calc(6% / 6);
+    }
+
+    section:nth-of-type(2) ul li:nth-of-type(1),
+    section:nth-of-type(2) ul li:nth-of-type(2) {
+        flex-basis: calc(100% / 2 - 6%);
+        align-self: flex-start;
     }
 }
 
