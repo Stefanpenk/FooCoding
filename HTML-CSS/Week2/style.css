@@ -7,9 +7,8 @@
 }
 
 body {
-    margin: 0 auto;
-    border: 2px solid black;
     font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 header h1 {
@@ -23,17 +22,24 @@ header h1 {
 }
 
 h2 {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding: 10px 0;
     text-transform: uppercase;
     text-align: center;
     font-size: 25px;
     line-height: 35px;
     font-family: 'Roboto', sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+section {
+    padding: 2%;
 }
 
 section ul li {
     display: block;
-    width: 22.5vw;
+    width: 23%;
     list-style: none;
     box-shadow: 0 0 4px 4px #ddd;
     cursor: pointer;
@@ -42,8 +48,9 @@ section ul li {
     left: 0;
     float: left;
     height: 400px;
-    margin: 1vw;
+    margin: 1%;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 section ul li h3 {
@@ -95,20 +102,7 @@ section ul li:hover p {
     transform: translateY(0);
 }
 
-section ul li:nth-child(2):before,
-section ul li:nth-child(9):before,
-section ul li:nth-child(4):before,
-section ul li:nth-child(11):before,
-section ul li:nth-child(6):before,
-section ul li:nth-child(13):before,
-section ul li:nth-child(7):before,
-section ul li:nth-child(14):before,
-section ul li:nth-child(3):before,
-section ul li:nth-child(10):before,
-section ul li:nth-child(5):before,
-section ul li:nth-child(12):before,
-section ul li:nth-child(1):before,
-section ul li:nth-child(8):before {
+section ul li:before {
     display: block;
     position: absolute;
     top: 0;
@@ -160,7 +154,7 @@ section ul li:nth-child(14):before {
         opacity: 0%;
     }
 
-    8% {
+    5% {
         opacity: 0%;
     }
 
@@ -172,7 +166,7 @@ section ul li:nth-child(14):before {
         opacity: 0.1;
     }
 
-    92% {
+    95% {
         opacity: 0%;
     }
 
@@ -194,7 +188,7 @@ section:nth-of-type(1) ul li:nth-of-type(1) {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    width: calc(45vw + 2vw);
+    width: 48%;
 }
 
 section:nth-of-type(1) ul li:nth-of-type(1) h3 {
@@ -246,7 +240,8 @@ section:nth-of-type(1) ul li:nth-of-type(1):hover img {
 
 /* SEKCTION 2 */
 section:nth-of-type(2) {
-    height: 2000px;
+    min-height: 2000px;
+    padding-bottom: 20px;
 }
 
 section:nth-of-type(2) h2 {
@@ -271,59 +266,182 @@ section:nth-of-type(2) ul li:nth-of-type(1) {
 }
 
 /* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
+  ##Device = Tablets, Ipads
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
+@media (max-width: 1024px) {
+    /* body {
         background-color: darkgray;
+    } */
+
+    /* ALL ELEMENTS */
+    section ul li {
+        height: 400px;
     }
 
+    section ul li h3 {
+        padding-bottom: 10px;
+        font-size: 20px;
+        line-height: 30px;
+        min-height: 0;
+    }
+
+    section ul li img {
+        width: 90%;
+    }
+
+    section ul li p {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(0);
+        left: 0;
+        transition: 0;
+    }
+
+    p::before {
+        display: none;
+    }
+
+    /* SECTION 1 */
+    section:nth-of-type(1) ul li {
+        width: 31.3%;
+        margin: 1%;
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1),
+    section:nth-of-type(1) ul li:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 48%;
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1) h3,
+    section:nth-of-type(1) ul li:nth-of-type(2) h3 {
+        flex-basis: 100%;
+        min-height: 40px;
+        line-height: 40px;
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1) img {
+        flex-basis: 100%;
+        transition: 0s;
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1) p {
+        width: 100%;
+        top: 80%;
+        left: 0;
+        bottom: 0;
+        transform: translateY(0);
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1):hover p {
+        transform: translateX(0);
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1):hover img {
+        transform: scale(1);
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(2) p {
+        min-height: 0;
+    }
+
+    /* SECTION 2 */
     section:nth-of-type(2) ul {
         justify-content: space-evenly;
     }
 
     section:nth-of-type(2) ul li {
-        flex-basis: calc((100% / 3) - 6%);
-        margin: calc(6% / 6);
+        flex-basis: calc((100% / 3) - 5%);
+        margin: calc(5% / 6);
+        margin-bottom: 20px;
     }
 
     section:nth-of-type(2) ul li:nth-of-type(1),
     section:nth-of-type(2) ul li:nth-of-type(2) {
-        flex-basis: calc(100% / 2 - 6%);
+        flex-basis: calc(100% / 2 - 5%);
         align-self: flex-start;
     }
+
 }
 
 /* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
+  ##Device = Most of the Smartphones Mobiles 
 */
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    body {
-        background-color: orange;
-    }
-}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-    body {
-        background-color: darkblue;
-    }
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-    body {
+@media (max-width: 480px) {
+    /* body {
         background-color: red;
+    } */
+
+    /* ALL ELEMENTS */
+
+    section ul li {
+        height: 400px;
+        animation: none;
     }
+
+    section ul li:before {
+        display: none;
+        animation: none;
+    }
+
+    section ul li:nth-of-type(1):before {
+        display: block;
+        animation: backgroundImg 20s linear infinite;
+    }
+
+    section ul li h3 {
+        padding: 5px 5px 15px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    section ul li p {
+        font-size: 14px;
+    }
+
+    /* SECTION 1 */
+    section:nth-of-type(1) ul li,
+    section:nth-of-type(1) ul li:nth-of-type(2) {
+        width: 46%;
+        margin: 2%;
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        width: 96%;
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(2) h3 {
+        line-height: 20px;
+    }
+
+    section:nth-of-type(1) ul li:nth-of-type(1) p {
+        height: 120px;
+        top: 100%;
+        transform: translateY(-100%);
+    }
+
+    /* SECTION 2 */
+    section:nth-of-type(2) ul {
+        justify-content: space-evenly;
+    }
+
+    section:nth-of-type(2) ul li {
+        flex-basis: 46%;
+        margin: 2%;
+        margin-bottom: 10px;
+    }
+
+    section:nth-of-type(2) ul li:nth-of-type(1) {
+        flex-basis: 96%;
+        align-self: flex-start;
+    }
+
+
 }
