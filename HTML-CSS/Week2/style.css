@@ -96,9 +96,14 @@ section ul li p {
 }
 
 p::before {
-    content: url(./images/arrow-up.svg);
+    content: "";
+    background-image: url(./images/arrow-up.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     width: 30px;
+    height: 15px;
     padding: 5px;
     bottom: 100%;
     left: 10%;
@@ -227,17 +232,15 @@ section ul li:nth-of-type(1) p {
 }
 
 section ul li:nth-of-type(1) p::before {
-    content: url(./images/arrow\ left.svg);
-    position: absolute;
-    width: 30px;
-    padding: 5px;
+    content: "";
+    background-image: url(./images/arrow\ left.svg);
+    width: 15px;
+    height: 30px;
     bottom: 10%;
-    left: -40px;
-    background-color: rgba(0, 0, 0, 0.4);
+    left: -25px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0px;
-    fill: #fff;
 }
 
 section ul li:nth-of-type(1):hover p {
