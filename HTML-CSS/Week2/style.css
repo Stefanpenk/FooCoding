@@ -38,6 +38,11 @@ section {
     padding: 2%;
 }
 
+section ul {
+    margin: auto;
+    max-width: 1440px;
+}
+
 section ul li {
     display: block;
     width: 23%;
@@ -56,6 +61,7 @@ section ul li {
 
 section ul li h3 {
     display: block;
+    position: relative;
     padding: 0 5px;
     padding-bottom: 30px;
     font-size: 25px;
@@ -63,6 +69,7 @@ section ul li h3 {
     min-height: 100px;
     text-transform: uppercase;
     text-align: center;
+    z-index: 1;
 }
 
 section ul li img {
@@ -70,6 +77,7 @@ section ul li img {
     width: 100%;
     max-width: 450px;
     margin: 0 auto;
+    transition: 4s;
 }
 
 section ul li p {
@@ -99,8 +107,16 @@ p::before {
     fill: #fff;
 }
 
+section ul li:hover {
+    border: 5px solid rgb(88, 92, 137);
+}
+
 section ul li:hover p {
     transform: translateY(0);
+}
+
+section ul li:hover img {
+    transform: scale(2);
 }
 
 section ul li:before {
