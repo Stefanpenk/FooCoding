@@ -60,7 +60,42 @@ body {
 }
 
 /* HEADER */
-.header-top {
+#header-top {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #fff;
+}
 
+#header-top .box-left,
+#header-top .box-right {
+    width: 15%;
+}
+
+#header-top .box-left .item {
+    padding-left: 15%;
+}
+
+.item span {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#header-top .box-center {
+    width: 70%;
+}
+
+.box-center .slogan {
+    text-align: center;
+    font-size: 16px;
+}
+
+#header-top .box-right ul {
+    padding-right: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header-top .box-right ul li {
+    padding: 0 5px;
 }
