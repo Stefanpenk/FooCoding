@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NORMALIZATION */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+    display: block
+}
+
+body {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #202121;
+
+}
+
+/* WRAPPER */
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    /* delete after- just to see content */
+    background-color: #7d978f;
+}
+
+/* BOX UKRAINE */
+.box-ukraine {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #000;
+    font-size: 17px;
+    color: #fff;
+}
+
+.box-ukraine svg {
+    margin: 0 10px;
+}
+
+/* HEADER */
+.header-top {
+    display: flex;
+
+}
