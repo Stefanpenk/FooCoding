@@ -4,7 +4,6 @@ font-family: 'Lato', sans-serif;
 font-family: 'Roboto', sans-serif; 
 */
 
-
 * {
     padding: 0;
     margin: 0;
@@ -48,7 +47,7 @@ body {
     width: 100%;
     min-height: 100%;
     /* delete after- just to see content */
-    background-color: #7d978f;
+    /* background-color: #7d978f; */
 }
 
 /* BOX UKRAINE */
@@ -408,7 +407,8 @@ ul .circle-note-progress .circle .percent {
 
 }
 
-.box-bl .button {
+.box-bl .button,
+.hover-item .button {
     padding: 0 20px;
     height: 34px;
     line-height: 34px;
@@ -426,7 +426,8 @@ ul .circle-note-progress .circle .percent {
     background-color: #3a9d92;
 }
 
-.box-bl strong.button {
+.box-bl strong.button,
+.hover-item .button {
     display: flex;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.0);
@@ -497,4 +498,233 @@ ul .circle-note-progress .circle .percent {
 
 .box-users-likes ul li div a img {
     border-radius: 50%;
+}
+
+/* BLOCK-SOTD */
+.inner {
+    position: relative;
+    width: 1905px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 60px
+}
+
+.box-heading.no-flex {
+    align-items: center;
+    padding: 50px 0;
+    font-size: 17px;
+    line-height: 31px;
+}
+
+.list-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid .list-items .col-3 {
+    padding-left: 35px;
+    width: calc(100%/3);
+    display: flex;
+}
+
+.list-flex .box-item,
+.list-flex .box-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.rollover {
+    position: relative;
+    background-color: black;
+}
+
+.rollover:hover img {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.box-photo {
+    overflow: hidden;
+}
+
+.box-photo img {
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.rollover .hover-item {
+    display: flex;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.rollover .top.left {
+    top: 20px;
+    left: 20px;
+}
+
+.list-share-circles ul {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 34px;
+}
+
+.list-share-circles li {
+    display: flex;
+    margin-right: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.bt-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rollover .hover-item.top {
+    top: 20px;
+    right: 20px;
+}
+
+.rollover .hover-item.bottom {
+    right: 20px;
+    bottom: 20px;
+}
+
+.button.circle.x-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+    width: 34px;
+}
+
+.hover-item svg {
+    fill: #fff;
+}
+
+.rollover:hover .hover-item {
+    visibility: visible;
+    opacity: 1;
+}
+
+.box-item .box-info {
+    width: 100%;
+}
+
+.list-items .box-item div.content {
+    padding: 20px;
+}
+
+.list-items .box-info .row {
+    margin-bottom: 15px;
+}
+
+.list-items .box-info .row.row-2col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-items .box-info .footer.style2 {
+    padding: 10px 20px;
+}
+
+.list-items .box-info .footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.list-items .box-info .footer .box-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.list-items .box-byuser {
+    display: flex;
+    align-items: center;
+}
+
+.list-items .box-byuser img {
+    border-radius: 50%;
+}
+
+.list-items .box-byuser .by {
+    flex: 1;
+    padding: 0 5px;
+    text-transform: uppercase;
+}
+
+.list-items .box-byuser .by strong {
+    font-weight: 700;
+}
+
+.list-items .box-info .footer .box-right {
+    display: flex;
+    align-items: center;
+}
+
+.list-items .box-info .footer .list-tags {
+    display: flex;
+}
+
+.list-items .box-info .list-tags li {
+    margin-right: 5px;
+}
+
+.list-tags.size-small .item {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    padding: 1px 5px 0 5px;
+    line-height: normal;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.tooltip .box-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 8px;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out;
+}
+
+.list-tags li.hm .item {
+    background-color: #9fd2d6;
+    color: #fff;
+}
+
+.list-tags li.dotd .item {
+    background-color: #8154EF;
+    color: #fff;
+}
+
+.list-tags li.sotd .item {
+    background-color: #FF4E4E;
+    color: #fff;
 }
