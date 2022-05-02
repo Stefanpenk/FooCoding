@@ -21,6 +21,10 @@ li {
     list-style: none;
 }
 
+strong {
+    font-weight: 700;
+}
+
 article,
 aside,
 details,
@@ -513,7 +517,7 @@ ul .circle-note-progress .circle .percent {
     padding: 0 60px
 }
 
-.box-heading.no-flex {
+.box-heading {
     align-items: center;
     padding: 50px 0;
     font-size: 17px;
@@ -526,7 +530,7 @@ ul .circle-note-progress .circle .percent {
     flex-wrap: wrap;
 }
 
-.grid.js-grid {
+.grid {
     position: relative;
     left: -35px;
 }
@@ -738,7 +742,7 @@ ul .circle-note-progress .circle .percent {
     color: #fff;
 }
 
-/* BLOCK P-0 */
+/* BLOCK P-0 NOMINESS*/
 .rollover .hover-item.center {
     transform: translate(-50%, -50%);
     display: block;
@@ -752,4 +756,102 @@ ul .circle-note-progress .circle .percent {
     padding: 30px;
     color: black;
     background-color: #fff;
+}
+
+/* BLOCK P-0 ACADEMY*/
+.list-items .box-style8 div.content {
+    padding-top: 30px;
+}
+
+.list-flex .box-info,
+.list-flex .box-info .content {
+    flex: 1;
+}
+
+.list-items .box-info .row {
+    height: auto;
+    margin-bottom: 12px;
+    line-height: 20px;
+}
+
+.list-items .box-info .footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px 20px;
+    font-size: 12px;
+}
+
+.list-items .box-style8 .title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.box-dropdown .option-active {
+    position: relative;
+    padding-right: 20px;
+    color: #49c5b6;
+    cursor: pointer;
+}
+
+.box-dropdown .option-active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 62%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border: 3px solid #49c5b6;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(135deg);
+}
+
+.list-items .box-info .footer .box-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.list-items .box-info .footer {
+    background-color: #fff;
+}
+
+.button.border-gray.rounded {
+    display: block;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #ddd;
+    height: 34px;
+    padding: 0 20px;
+    line-height: 34px;
+}
+
+.button.border-gray.rounded:hover {
+    border-color: #49c5b6;
+    color: #49c5b6;
+}
+
+.above-item.bottom.left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.button.orange-coral {
+    display: block;
+    padding: 0 10px;
+    background-color: #ff5959;
+    color: #fff;
+    border-radius: 5px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.rollover:hover .button.orange-coral {
+    visibility: hidden;
 }
