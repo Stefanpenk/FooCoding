@@ -509,6 +509,10 @@ ul .circle-note-progress .circle .percent {
 }
 
 /* BLOCK-SOTD */
+.block {
+    padding: 50px 0;
+}
+
 .inner {
     position: relative;
     width: 1905px;
@@ -518,10 +522,17 @@ ul .circle-note-progress .circle .percent {
 }
 
 .box-heading {
+    display: flex;
     align-items: center;
     padding: 50px 0;
     font-size: 17px;
     line-height: 31px;
+}
+
+.box-heading h1,
+.box-heading h2 {
+    display: inline;
+    margin: 0;
 }
 
 .list-flex {
@@ -544,6 +555,7 @@ ul .circle-note-progress .circle .percent {
 .list-flex .box-item,
 .list-flex .box-info {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -556,6 +568,7 @@ ul .circle-note-progress .circle .percent {
 }
 
 .rollover:hover img {
+    position: relative;
     opacity: 0.5;
     transform: scale(1.1);
 }
@@ -566,7 +579,6 @@ ul .circle-note-progress .circle .percent {
 
 .box-photo img {
     width: 100%;
-    overflow: hidden;
     transition: 0.3s;
 }
 
@@ -854,4 +866,76 @@ ul .circle-note-progress .circle .percent {
 
 .rollover:hover .button.orange-coral {
     visibility: hidden;
+}
+
+/* BLOCK DIRECTORY*/
+.box-heading .box-left {
+    flex-grow: 1;
+}
+
+.box-heading .gap {
+    display: flex;
+    gap: 10px;
+}
+
+strong a {
+    color: #49c5b6;
+}
+
+strong a:hover {
+    color: #202121;
+    text-decoration: none;
+}
+
+.box-right strong a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.box-users-likes {
+    display: flex;
+    position: relative;
+}
+
+.bt-like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bt-like .circle {
+    stroke: #ddd;
+}
+
+.bt-like .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 1;
+    transition: 0.3s;
+}
+
+.bt-like .ico-svg {
+    fill: #ddd;
+}
+
+.bt-like .number {
+    position: absolute;
+    bottom: -8px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 11px;
 }
