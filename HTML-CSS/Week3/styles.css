@@ -46,8 +46,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100%;
-    /* delete after- just to see content */
-    /* background-color: #7d978f; */
+    background-color: #F4F7F6;
 }
 
 /* BOX UKRAINE */
@@ -263,6 +262,10 @@ body {
     justify-content: space-between;
     text-align: center;
 
+}
+
+.box-info {
+    background-color: #fff;
 }
 
 .inner.vertical-center .box-info {
@@ -522,6 +525,11 @@ ul .circle-note-progress .circle .percent {
     flex-wrap: wrap;
 }
 
+.grid.js-grid {
+    position: relative;
+    left: -35px;
+}
+
 .grid .list-items .col-3 {
     padding-left: 35px;
     width: calc(100%/3);
@@ -727,4 +735,20 @@ ul .circle-note-progress .circle .percent {
 .list-tags li.sotd .item {
     background-color: #FF4E4E;
     color: #fff;
+}
+
+/* BLOCK P-0 */
+.rollover .hover-item.center {
+    transform: translate(-50%, -50%);
+    display: block;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.rollover .hover-item.center a {
+    padding: 30px;
+    color: black;
+    background-color: #fff;
 }
