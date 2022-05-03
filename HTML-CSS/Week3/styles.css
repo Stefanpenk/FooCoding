@@ -770,6 +770,10 @@ ul .circle-note-progress .circle .percent {
     background-color: #fff;
 }
 
+.by strong a {
+    color: #000;
+}
+
 /* BLOCK P-0 ACADEMY*/
 .list-items .box-style8 div.content {
     padding-top: 30px;
