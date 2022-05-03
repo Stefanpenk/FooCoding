@@ -576,16 +576,16 @@ ul .circle-note-progress .circle .percent {
 }
 
 .grid .list-items .col-3 {
-    padding-left: 35px;
+    width: calc(95%/3);
+    margin-left: calc(5%/2);
     padding-bottom: 35px;
-    width: calc(100%/3);
     display: flex;
 }
 
 .grid .list-items .col-3:nth-of-type(1),
 .grid .list-items .col-3:nth-of-type(4),
 .grid .list-items .col-3:nth-of-type(7) {
-    padding-left: 0px;
+    margin-left: 0px;
 }
 
 .list-flex .box-item,
@@ -600,6 +600,9 @@ ul .circle-note-progress .circle .percent {
 
 .rollover {
     position: relative;
+    /* display: block;
+    width: 100%;
+    height: auto; */
     background-color: black;
 }
 
@@ -732,6 +735,9 @@ ul .circle-note-progress .circle .percent {
     flex: 1;
     padding: 0 5px;
     text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .list-items .box-byuser .by strong {
@@ -866,6 +872,10 @@ ul .circle-note-progress .circle .percent {
     flex: 1;
     display: flex;
     align-items: center;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 3px;
 }
 
 .list-items .box-info .footer {
@@ -1148,9 +1158,9 @@ strong a:hover {
         display: none;
     }
 
-    #header {
+    /* #header {
         position: relative;
-    }
+    } */
 
     #header .item.login {
         display: none;
