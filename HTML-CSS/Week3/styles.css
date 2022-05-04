@@ -101,7 +101,7 @@ body {
     width: 70%;
 }
 
-.box-center .slogan {
+#header-top .box-center .slogan {
     text-align: center;
     font-size: 16px;
     font-weight: 400;
@@ -604,9 +604,6 @@ ul .circle-note-progress .circle .percent {
 
 .rollover {
     position: relative;
-    /* display: block;
-    width: 100%;
-    height: auto; */
     background-color: black;
 }
 
@@ -1143,6 +1140,10 @@ strong a:hover {
     padding-top: 30px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     line-height: 18px;
+}
+
+#footer .box-bottom .inner .box-left {
+    flex-grow: 1;
 }
 
 .box-bottom .box-left ul li {
