@@ -14,4 +14,5 @@ JavaScript 1
 
 Week 2 Homework : https://stefanpenk.github.io/FooCoding/JavaScript1/Week2/
 
+Week 3 Homework : https://stefanpenk.github.io/FooCoding/JavaScript1/Week3/
 
