@@ -1,0 +1,52 @@
+.main {
+  margin: 0 3%;
+  color: white;
+
+  .charsContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .character {
+    margin: 1%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 31%;
+    // border: 1px solid black;
+    box-shadow: 0 0 9px 0px #4a5757;
+
+    h3 {
+      font-size: 30px;
+    }
+
+    h4 {
+      font-size: 25px;
+    }
+
+    h5 {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    &:hover .img-container {
+      transform: scale(1.2);
+    }
+  }
+
+  .overflowHidden {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+  }
+}
