@@ -98,10 +98,71 @@ body {
 }
 
 .main {
-  color: black;
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
 }
 
-.main .charsContainer {
+.main .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main .search .label {
+  padding-bottom: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.main .input {
+  padding: 10px;
+  width: 150px;
+  height: 80px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.main .svgL {
+  margin-right: -5px;
+  height: 80px;
+}
+
+.main .svgL svg {
+  height: 100%;
+}
+
+.main .svg {
+  margin-left: -3px;
+  height: 80px;
+}
+
+.main .svg svg {
+  height: 100%;
+}
+
+.charsContainer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,10 +172,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 150px;
-  margin-top: 30vh;
+  margin-top: 290px;
 }
 
-.main .honeycomb {
+.honeycomb {
   width: 250px;
   height: 137.5px;
   margin: 0 6.875px;
@@ -125,7 +186,7 @@ body {
   cursor: pointer;
 }
 
-.main .honeycomb-cell {
+.honeycomb-cell {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -137,14 +198,14 @@ body {
   transition: 0.5s;
 }
 
-.main .honeycomb-cell::before {
+.honeycomb-cell::before {
   content: '';
   background-color: #fff;
   -webkit-transform: scale(1.055);
           transform: scale(1.055);
 }
 
-.main .honeycomb-cell::before, .main .honeycomb-cell_img {
+.honeycomb-cell::before, .honeycomb-cell_img {
   top: -50%;
   left: 0;
   width: 100%;
@@ -156,7 +217,7 @@ body {
   z-index: -1;
 }
 
-.main .honeycomb-cell_img {
+.honeycomb-cell_img {
   width: 100%;
   background-image: url("https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg");
   background-repeat: no-repeat;
@@ -164,7 +225,7 @@ body {
   background-size: 100%;
 }
 
-.main .honeycomb-cell_tittle {
+.honeycomb-cell_tittle {
   padding: 5px;
   text-transform: uppercase;
   color: #111;
@@ -172,12 +233,12 @@ body {
   font-size: 1.75em;
 }
 
-.main .honeycomb-cell_nickname {
+.honeycomb-cell_nickname {
   font-size: 1.75em;
   color: #868686;
 }
 
-.main .honeycomb-cell_smallText {
+.honeycomb-cell_smallText {
   padding: 5px;
   text-transform: uppercase;
   color: #868686;
@@ -185,11 +246,11 @@ body {
   font-size: 1.5em;
 }
 
-.main .honeycomb-cell_serial {
+.honeycomb-cell_serial {
   font-size: 1.5em;
 }
 
-.main .honeycomb .flex {
+.honeycomb .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,19 +264,19 @@ body {
   opacity: 0;
 }
 
-.main .honeycomb:hover .honeycomb-cell:nth-of-type(3) {
+.honeycomb:hover .honeycomb-cell:nth-of-type(3) {
   -webkit-transform: translate(calc(50% * 1.055), calc(-150% * 1.055));
           transform: translate(calc(50% * 1.055), calc(-150% * 1.055));
   opacity: 100%;
 }
 
-.main .honeycomb:hover .honeycomb-cell:nth-of-type(2) {
+.honeycomb:hover .honeycomb-cell:nth-of-type(2) {
   -webkit-transform: translate(calc(50% * 1.055), calc(150% * 1.055));
           transform: translate(calc(50% * 1.055), calc(150% * 1.055));
   opacity: 100%;
 }
 
-.main .honeycomb:hover .honeycomb-cell:nth-of-type(4) {
+.honeycomb:hover .honeycomb-cell:nth-of-type(4) {
   -webkit-transform: translate(calc(-50% * 1.055), calc(150% * 1.055));
           transform: translate(calc(-50% * 1.055), calc(150% * 1.055));
   opacity: 100%;

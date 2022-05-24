@@ -50,11 +50,14 @@ setInterval(() => {
    video.currentTime = delay;
 }, 33.3);
 
-
 //MAIN
 const charsContainer = document.querySelector('.charsContainer');
 
+//input
+const input = document.querySelector('input');
+
 const characters = (data) => {
+   let container = [];
    data.map(object => {
       const honeycomb = document.createElement('ul');
       honeycomb.classList.add('honeycomb')
@@ -94,10 +97,24 @@ const characters = (data) => {
       serial.classList.add('honeycomb-cell_serial');
       serial.textContent = `seasons: ${object.appearance.join(', ')}`;
       li4.appendChild(serial);
-      charsContainer.appendChild(honeycomb);
+      // container.appendChild(honeycomb);
+      container.push(honeycomb);
    })
+   // console.log(container);
+   container.map(ul => charsContainer.appendChild(ul));
+   const searchTask = (e) => {
+      const searchText = e.target.value.toLowerCase();
+      let tasks = container;
+      tasks = tasks.filter(task => task.childNodes[2].childNodes[0].innerText.toLowerCase().includes(searchText));
+      // console.log(tasks);
+      charsContainer.textContent = '';
+      tasks.forEach(el => charsContainer.appendChild(el))
+   }
+   input.addEventListener('input', searchTask)
 };
 
 fetch("https://www.breakingbadapi.com/api/characters")
    .then(res => res.json())
-   .then(data => characters(data))
+   .then(data => {
+      characters(data);
+   })
