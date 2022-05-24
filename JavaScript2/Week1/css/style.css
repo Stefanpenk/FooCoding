@@ -8,7 +8,7 @@
 body {
   font-family: 'Source Serif Pro', serif;
   text-align: center;
-  background-color: #111;
+  background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
 }
 
 .intro {
@@ -229,6 +229,7 @@ body {
   padding: 5px;
   text-transform: uppercase;
   color: #111;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.75em;
 }
