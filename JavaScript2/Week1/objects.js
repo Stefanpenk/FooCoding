@@ -15,7 +15,7 @@ const scene = new ScrollMagic.Scene({
       triggerElement: intro,
       triggerHook: 0
    })
-   .addIndicators()
+   // .addIndicators()
    .setPin(intro)
    .addTo(controller);
 
@@ -46,9 +46,7 @@ scene.on('update', e => {
 })
 
 setInterval(() => {
-   delay += (scrollpos - delay) * accelamount;
-   //   console.log(scrollpos, delay);
-
+   delay += (scrollpos - delay) * accelamount
    video.currentTime = delay;
 }, 33.3);
 
@@ -58,28 +56,45 @@ const charsContainer = document.querySelector('.charsContainer');
 
 const characters = (data) => {
    data.map(object => {
-      const container = document.createElement('div');
-      container.classList.add('character')
-      const name = document.createElement('h3');
-      name.textContent = object.name;
-      container.appendChild(name);
-      const nickname = document.createElement('h4');
+      const honeycomb = document.createElement('ul');
+      honeycomb.classList.add('honeycomb')
+      const li1 = document.createElement('li');
+      li1.classList.add('honeycomb-cell');
+      li1.classList.add('hover');
+      honeycomb.appendChild(li1);
+      const img = document.createElement('div');
+      img.classList.add('honeycomb-cell_img');
+      img.style.backgroundImage = `url(${object.img})`;
+      li1.appendChild(img);
+      const li2 = document.createElement('li');
+      li2.classList.add('honeycomb-cell');
+      li2.classList.add('flex');
+      honeycomb.appendChild(li2);
+      const smallText = document.createElement('div');
+      smallText.classList.add('honeycomb-cell_smallText');
+      smallText.textContent = object.occupation.join(', ');
+      li2.appendChild(smallText);
+      const li3 = document.createElement('li');
+      li3.classList.add('honeycomb-cell');
+      li3.classList.add('flex');
+      honeycomb.appendChild(li3);
+      const tittle = document.createElement('div');
+      tittle.classList.add('honeycomb-cell_tittle');
+      tittle.textContent = object.name;
+      li3.appendChild(tittle);
+      const nickname = document.createElement('div');
+      nickname.classList.add('honeycomb-cell_nickname');
       nickname.textContent = object.nickname;
-      container.appendChild(nickname);
-      const occupation = document.createElement('h5');
-      occupation.textContent = object.occupation.join(', ');
-      container.appendChild(occupation);
-      const appearance = document.createElement('p');
-      appearance.textContent = `seasons: ${object.appearance.join(', ')}`;
-      container.appendChild(appearance);
-      const overflowHidden = document.createElement('div');
-      overflowHidden.classList.add('overflowHidden');
-      container.appendChild(overflowHidden);
-      const imgDiv = document.createElement('div');
-      imgDiv.classList.add('img-container');
-      imgDiv.style.backgroundImage = `url(${object.img})`;
-      overflowHidden.appendChild(imgDiv);
-      charsContainer.appendChild(container);
+      li3.appendChild(nickname);
+      const li4 = document.createElement('li');
+      li4.classList.add('honeycomb-cell');
+      li4.classList.add('flex');
+      honeycomb.appendChild(li4);
+      const serial = document.createElement('div')
+      serial.classList.add('honeycomb-cell_serial');
+      serial.textContent = `seasons: ${object.appearance.join(', ')}`;
+      li4.appendChild(serial);
+      charsContainer.appendChild(honeycomb);
    })
 };
 

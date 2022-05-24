@@ -1,52 +1,111 @@
 .main {
-  margin: 0 3%;
-  color: white;
+  color: black;
 
   .charsContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 150px;
+    margin-top: 30vh;
   }
 
-  .character {
-    margin: 1%;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 31%;
-    // border: 1px solid black;
-    box-shadow: 0 0 9px 0px #4a5757;
+  .honeycomb {
+    width: 250px;
+    height: 137.5px;
+    margin: 0 6.875px;
+    margin-top: 6.875px;
+    margin-bottom: 281.875px;
+    position: relative;
+    list-style: none;
+    cursor: pointer;
 
-    h3 {
-      font-size: 30px;
-    }
-
-    h4 {
-      font-size: 25px;
-    }
-
-    h5 {
-      flex-grow: 1;
+    &-cell {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.5em;
       text-align: center;
+      transition: 0.5s;
+
+      &::before {
+        content: '';
+        background-color: #fff;
+        transform: scale(1.055);
+      }
+
+      &::before,
+      &_img {
+        top: -50%;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        display: block;
+        position: absolute;
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        z-index: -1;
+      }
+
+      &_img {
+        width: 100%;
+        background-image: url("https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+
+      &_tittle {
+        padding: 5px;
+        text-transform: uppercase;
+        color: #111;
+        font-weight: 700;
+        font-size: 1.75em;
+      }
+
+      &_nickname {
+        font-size: 1.75em;
+        color: rgb(134, 134, 134);
+      }
+
+      &_smallText {
+        padding: 5px;
+        text-transform: uppercase;
+        color: rgb(134, 134, 134);
+        font-weight: 700;
+        font-size: 1.5em;
+      }
+
+      &_serial {
+        font-size: 1.5em;
+      }
     }
 
-    &:hover .img-container {
-      transform: scale(1.2);
+    .flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
     }
   }
 
-  .overflowHidden {
-    width: 100%;
-    overflow: hidden;
+  .honeycomb:hover .honeycomb-cell:nth-of-type(3) {
+    transform: translate(calc(50% * 1.055), calc(-150% * 1.055));
+    opacity: 100%;
   }
 
-  .img-container {
-    width: 100%;
-    height: 500px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: .5s;
+  .honeycomb:hover .honeycomb-cell:nth-of-type(2) {
+    transform: translate(calc(50% * 1.055), calc(150% * 1.055));
+    opacity: 100%;
   }
+
+  .honeycomb:hover .honeycomb-cell:nth-of-type(4) {
+    transform: translate(calc(-50% * 1.055), calc(150% * 1.055));
+    opacity: 100%;
+  }
+}
+
+.hover:hover::before {
+  background: #59a484;
+  background: linear-gradient(144deg, #59a484 0%, rgba(33, 47, 2, 1) 95%);
 }
