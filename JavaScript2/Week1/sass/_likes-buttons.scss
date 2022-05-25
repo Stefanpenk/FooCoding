@@ -1,0 +1,17 @@
+.buttons {
+  flex-grow: 1;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  &>* {
+    width: 15%;
+    cursor: pointer;
+  }
+
+
+  // .dislike_button {
+  //   width: 15%;
+  // }
+}

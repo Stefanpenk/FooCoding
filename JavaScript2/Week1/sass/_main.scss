@@ -3,59 +3,6 @@
   top: 0;
   left: 0;
   min-height: 100vh;
-
-  .search {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    // background-color: rgba(255, 255, 255, 0.3);
-
-    .label {
-      padding-bottom: 10px;
-      width: 100%;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 40px;
-      letter-spacing: 2px;
-    }
-  }
-
-  .input {
-    padding: 10px;
-    width: 150px;
-    height: 80px;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
-    outline: none;
-    border: none;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-  }
-
-  .svgL {
-    margin-right: -5px;
-    height: 80px;
-
-    svg {
-      height: 100%;
-    }
-
-  }
-
-  .svg {
-    // width: 100%;
-    margin-left: -3px;
-    height: 80px;
-
-    svg {
-      height: 100%;
-    }
-  }
 }
 
 .charsContainer {
@@ -111,7 +58,7 @@
       background-image: url("https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 100%;
+      background-size: cover;
     }
 
     &_tittle {
@@ -148,6 +95,12 @@
     opacity: 0;
   }
 }
+
+
+// .honeycomb-cell:nth-of-type(3) {
+//   transform: translate(calc(50% * 1.055), calc(-150% * 1.055));
+//   opacity: 100%;
+// }
 
 .honeycomb:hover .honeycomb-cell:nth-of-type(3) {
   transform: translate(calc(50% * 1.055), calc(-150% * 1.055));
