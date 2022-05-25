@@ -24,35 +24,39 @@
       letter-spacing: 2px;
     }
 
-    .input {
-      padding: 10px;
-      width: 150px;
-      height: 80px;
-      font-size: 20px;
-      background-color: #fff;
-      outline: none;
-      border: none;
-      border-top: 2px solid black;
-      border-bottom: 2px solid black;
-    }
+    .search-input {
+      display: flex;
 
-    .svgL {
-      margin-right: -5px;
-      height: 80px;
-
-      svg {
-        height: 100%;
+      .input {
+        padding: 10px;
+        width: 150px;
+        height: 80px;
+        font-size: 20px;
+        background-color: #fff;
+        outline: none;
+        border: none;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
       }
 
-    }
+      .svgL {
+        margin-right: -5px;
+        height: 80px;
 
-    .svg {
-      // width: 100%;
-      margin-left: -3px;
-      height: 80px;
+        svg {
+          height: 100%;
+        }
 
-      svg {
-        height: 100%;
+      }
+
+      .svg {
+        // width: 100%;
+        margin-left: -3px;
+        height: 80px;
+
+        svg {
+          height: 100%;
+        }
       }
     }
   }

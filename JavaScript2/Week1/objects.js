@@ -180,6 +180,29 @@ const characters = (data) => {
       const deleteButton = ul.childNodes[0].childNodes[1];
       deleteButton.addEventListener('click', deleteCharacter);
    })
+
+   //BUTTONS
+   const showRandom = document.querySelector('.interface-buttons_random');
+   const showAll = document.querySelector('.interface-buttons_all');
+   //show random
+   // console.log(showRandom);
+   // console.log(showAll);
+   const handleShowRandom = () => {
+      // console.log(container[1]);
+      const random = container[Math.floor(Math.random() * container.length)];
+      // console.log(random);
+      charsContainer.textContent = '';
+      charsContainer.appendChild(random);
+   }
+
+   showRandom.addEventListener('click', handleShowRandom);
+
+   //show all
+   const handleShowAll = () => {
+      container.map(ul => charsContainer.appendChild(ul));
+   };
+
+   showAll.addEventListener('click', handleShowAll)
 };
 
 fetch("https://www.breakingbadapi.com/api/characters")
