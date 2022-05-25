@@ -1,54 +1,54 @@
-// //INTRO
-// const intro = document.querySelector('.intro');
-// const video = intro.querySelector('video');
-// const text = intro.querySelector('.intro_title');
+//INTRO
+const intro = document.querySelector('.intro');
+const video = intro.querySelector('video');
+const text = intro.querySelector('.intro_title');
 
-// const section = document.querySelector('.main');
-// const end = section.querySelector('h1');
+const section = document.querySelector('.main');
+const end = section.querySelector('h1');
 
-// //SCROLL MAGIC
-// const controller = new ScrollMagic.Controller();
+//SCROLL MAGIC
+const controller = new ScrollMagic.Controller();
 
-// //Scenes
-// const scene = new ScrollMagic.Scene({
-//       duration: 9000,
-//       triggerElement: intro,
-//       triggerHook: 0
-//    })
-//    // .addIndicators()
-//    .setPin(intro)
-//    .addTo(controller);
+//Scenes
+const scene = new ScrollMagic.Scene({
+      duration: 9000,
+      triggerElement: intro,
+      triggerHook: 0
+   })
+   // .addIndicators()
+   .setPin(intro)
+   .addTo(controller);
 
-// //Text Animation
-// const textAnim = TweenMax.fromTo(text, 3, {
-//    opacity: 0
-// }, {
-//    opacity: 1
-// });
+//Text Animation
+const textAnim = TweenMax.fromTo(text, 3, {
+   opacity: 0
+}, {
+   opacity: 1
+});
 
-// const scene2 = new ScrollMagic.Scene({
-//       duration: 3000,
-//       triggerElement: intro,
-//       triggerHook: 0
-//    })
-//    .setTween(textAnim)
-//    .addTo(controller);
+const scene2 = new ScrollMagic.Scene({
+      duration: 3000,
+      triggerElement: intro,
+      triggerHook: 0
+   })
+   .setTween(textAnim)
+   .addTo(controller);
 
 
 
-// //Video Animation
-// let accelamount = 0.1;
-// let scrollpos = 0;
-// let delay = 0;
+//Video Animation
+let accelamount = 0.1;
+let scrollpos = 0;
+let delay = 0;
 
-// scene.on('update', e => {
-//    scrollpos = e.scrollPos / 1000;
-// })
+scene.on('update', e => {
+   scrollpos = e.scrollPos / 1000;
+})
 
-// setInterval(() => {
-//    delay += (scrollpos - delay) * accelamount
-//    video.currentTime = delay;
-// }, 33.3);
+setInterval(() => {
+   delay += (scrollpos - delay) * accelamount
+   video.currentTime = delay;
+}, 33.3);
 
 //MAIN
 const charsContainer = document.querySelector('.charsContainer');
@@ -74,6 +74,10 @@ const characters = (data) => {
       img.classList.add('honeycomb-cell_img');
       img.style.backgroundImage = `url(${object.img})`;
       li1.appendChild(img);
+      const deleteButton = document.createElement('div');
+      deleteButton.classList.add('delete_button');
+      deleteButton.textContent = 'X';
+      li1.appendChild(deleteButton);
 
       const li2 = document.createElement('li');
       li2.classList.add('honeycomb-cell');
@@ -134,7 +138,6 @@ const characters = (data) => {
    }
    input.addEventListener('input', searchTask);
 
-   // console.log(container[1].childNodes[2].childNodes[2].childNodes[0])
    //likes counter
    const likeCounter = document.querySelector('.board_like');
    const dislikeCounter = document.querySelector('.board_dislike');
@@ -165,6 +168,17 @@ const characters = (data) => {
    container.forEach((ul, e) => {
       const dislikeButton = ul.childNodes[2].childNodes[2].childNodes[1];
       dislikeButton.addEventListener('click', addDislike)
+   })
+
+   //delete character
+   const deleteCharacter = (e) => {
+      console.log(e.target.parentNode.parentNode);
+      e.target.parentNode.parentNode.remove();
+   }
+
+   container.forEach((ul, e) => {
+      const deleteButton = ul.childNodes[0].childNodes[1];
+      deleteButton.addEventListener('click', deleteCharacter);
    })
 };
 
