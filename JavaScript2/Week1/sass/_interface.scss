@@ -82,19 +82,29 @@
       padding: 10px;
       display: flex;
       width: 50%;
-      // flex-grow: 1;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       height: 80px;
       font-size: 30px;
       text-align: right;
+
+      p {
+        width: 50%;
+      }
+
+      span {
+        width: 10%;
+        margin: 0 20px;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      &.board_dislikes {
+        justify-content: flex-start;
+      }
     }
 
-    span {
-      margin: 0 20px;
-      flex-grow: 1;
-      font-weight: 700;
-    }
+
   }
 
 }

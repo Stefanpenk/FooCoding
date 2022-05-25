@@ -336,9 +336,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -347,12 +347,21 @@ body {
   text-align: right;
 }
 
-.interface .board span {
+.interface .board .flex p {
+  width: 50%;
+}
+
+.interface .board .flex span {
+  width: 10%;
   margin: 0 20px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   font-weight: 700;
+  text-align: left;
+}
+
+.interface .board .flex.board_dislikes {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .buttons {
