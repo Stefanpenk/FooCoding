@@ -42,18 +42,20 @@ body {
 }
 
 .books_header {
-  margin-top: 20vh;
-  font-size: 50px;
+  margin-top: 20vw;
+  width: 100%;
+  font-size: 5vw;
   text-transform: uppercase;
   color: #222;
+  text-align: center;
 }
 
 .button {
   margin-top: 50px;
-  padding: 20px;
+  padding: 3%;
   background-color: #a8cbff;
   font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  font-size: 3vw;
   font-weight: 700;
   text-transform: uppercase;
   border: 5px solid #222;
