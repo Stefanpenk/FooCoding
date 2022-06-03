@@ -91,6 +91,7 @@ li {
 }
 
 .cover img {
+  display: block;
   width: 100%;
 }
 
