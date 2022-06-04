@@ -105,10 +105,30 @@ const myBooks = {
     description: "The novel explores an alternative religious history, whose central plot point is that the Merovingian kings of France were descended from the bloodline of Jesus Christ and Mary Magdalene.",
   },
 }
-const ul = document.createElement("ul");
-const container = document.querySelector('.container').appendChild(ul);
+
+const buttonsContainer = document.querySelector('.buttons_container');
+const clickButton = document.querySelector('button');
+
+//Creating Array from myBooks object
 const myBooksArray = Object.entries(myBooks).map(book => book[1]);
 
+//Creating and appending ul inside HTML
+const ul = document.createElement("ul");
+const container = document.querySelector('.container').appendChild(ul);
+
+//Creating sort button
+const sortButton = document.createElement('div');
+sortButton.classList.add('button');
+sortButton.innerHTML = `<span class="material-symbols-outlined">sort_by_alpha</span>`;
+
+//Showing books info function
+const showInfo = (e) => {
+  if (e.target.parentNode.classList[0] === 'info') {
+    e.target.parentNode.classList.toggle('infoActive');
+  }
+};
+
+//Showing books function and creating HTML elements
 const objectElements = () => {
   for (let i = 0; i < myBooksArray.length; i++) {
     const li = document.createElement('li');
@@ -149,31 +169,7 @@ const objectElements = () => {
   buttonsContainer.appendChild(sortButton);
 };
 
-const button = document.querySelector('.button');
-
-button.addEventListener('click', objectElements);
-
-
-
-const showInfo = (e) => {
-  if (e.target.parentNode.classList[0] === 'info') {
-    e.target.parentNode.classList.toggle('infoActive');
-  }
-};
-
-document.body.addEventListener('click', showInfo);
-
-//CREATES SORT BY TITLE OPTTION
-//creating and getting elements from HTML
-const buttonsContainer = document.querySelector('.buttons_container');
-const clickButton = document.querySelector('button');
-const sortButton = document.createElement('div');
-sortButton.classList.add('button');
-sortButton.innerHTML = `<span class="material-symbols-outlined">sort_by_alpha</span>`;
-// sortButton.textContent = 'sort by title';
-
-//sort function
-
+//Sort function
 const sortFunction = (a, b) => {
   const titleA = a.title.toUpperCase();
   const titleB = b.title.toUpperCase();
@@ -186,10 +182,19 @@ const sortFunction = (a, b) => {
   return 0;
 }
 
+//Sort button funcion
 const handleSort = () => {
   myBooksArray.sort(sortFunction);
   ul.innerHTML = '';
   objectElements();
 };
 
+//Listener for click the button
+const button = document.querySelector('.button');
+button.addEventListener('click', objectElements);
+
+//Listener for books info
+document.body.addEventListener('click', showInfo);
+
+//Listener for sort button
 sortButton.addEventListener('click', handleSort);
