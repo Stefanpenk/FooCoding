@@ -50,7 +50,28 @@ body {
   text-align: center;
 }
 
+.buttons_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .button {
+  margin-top: 50px;
+  padding: 3%;
+  background-color: #a8cbff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 5px solid #222;
+  box-shadow: 7px 7px 0px 2px #222;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #222;
+}
+
+.sort_button {
   margin-top: 50px;
   padding: 3%;
   background-color: #a8cbff;

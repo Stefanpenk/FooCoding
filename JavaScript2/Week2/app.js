@@ -144,7 +144,9 @@ const objectElements = () => {
       }
     })
   }
-  button.removeEventListener('click', objectElements)
+  button.removeEventListener('click', objectElements);
+  clickButton.remove();
+  buttonsContainer.appendChild(sortButton);
 };
 
 const button = document.querySelector('.button');
@@ -160,3 +162,33 @@ const showInfo = (e) => {
 };
 
 document.body.addEventListener('click', showInfo);
+
+//CREATES SORT BY TITLE OPTTION
+//creating and getting elements from HTML
+const buttonsContainer = document.querySelector('.buttons_container');
+const clickButton = document.querySelector('button');
+const sortButton = document.createElement('div');
+sortButton.classList.add('sort_button');
+sortButton.textContent = 'sort by title';
+
+//sort function
+
+const sortFunction = (a, b) => {
+  const titleA = a.title.toUpperCase();
+  const titleB = b.title.toUpperCase();
+  if (titleA < titleB) {
+    return -1;
+  }
+  if (titleA > titleB) {
+    return 1;
+  }
+  return 0;
+}
+
+const handleSort = () => {
+  myBooksArray.sort(sortFunction);
+  ul.innerHTML = '';
+  objectElements();
+};
+
+sortButton.addEventListener('click', handleSort);
