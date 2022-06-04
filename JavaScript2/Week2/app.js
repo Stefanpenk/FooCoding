@@ -168,8 +168,9 @@ document.body.addEventListener('click', showInfo);
 const buttonsContainer = document.querySelector('.buttons_container');
 const clickButton = document.querySelector('button');
 const sortButton = document.createElement('div');
-sortButton.classList.add('sort_button');
-sortButton.textContent = 'sort by title';
+sortButton.classList.add('button');
+sortButton.innerHTML = `<span class="material-symbols-outlined">sort_by_alpha</span>`;
+// sortButton.textContent = 'sort by title';
 
 //sort function
 
