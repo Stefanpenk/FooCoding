@@ -2,6 +2,7 @@
 
 :root {
   --display: block;
+  --screenColor: #3cc850;
 }
 
 * {
@@ -74,7 +75,7 @@
 }
 
 .start_button {
-  width: 6%;
+  width: 5.5%;
   height: 7%;
   position: absolute;
   top: 73%;
@@ -95,7 +96,7 @@
   animation: flashing 1s infinite ease-in-out;
 }
 
-.next_button:hover,
+.next_button,
 .prev_button,
 .start_button {
   cursor: pointer;
@@ -150,9 +151,9 @@
   opacity: 50%;
 }
 
-.clickStart {
-  background-color: #ddd;
-  opacity: 50%;
+.screen_color {
+  fill: var(--screenColor);
+  transition: .2s;
 }
 
 @keyframes flashing {

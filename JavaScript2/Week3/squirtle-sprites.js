@@ -17,6 +17,13 @@ const nameScreen = document.querySelector('.name');
 const startButton = document.querySelector('.start_button');
 const prevButton = document.querySelector('.prev_button');
 const nextButton = document.querySelector('.next_button');
+const r = document.querySelector(':root');
+
+//Getting svg buttons
+const buttonNext = document.querySelector('.buttonNext');
+const buttonPrev = document.querySelector('.buttonPrev');
+const buttonStart = document.querySelector('.buttonStart');
+const light = document.querySelector('.light');
 
 //Whole data
 const pokemonData = JSON.parse(fetchPokemonData());
@@ -65,30 +72,36 @@ const handleStartClick = () => {
     li.textContent = `${stat.id} : ${stat.base_stat}`
     statsScreen.appendChild(li);
   })
+  r.style.setProperty('--screenColor', '#fff');
   startButton.style.setProperty('--display', 'none');
   prevButton.addEventListener('click', handlePrevClick);
   nextButton.addEventListener('click', handleNextClick);
   startButton.removeEventListener('click', handleStartClick);
-  startButton.removeEventListener('mousedown', handleChangeColor);
-  startButton.removeEventListener('mouseup', handleChangeColor);
 }
 
 //handle changing colors for button while clicking
-const handleChangeColor = () => {
-  startButton.classList.toggle('clickStart');
+const handleClickDown = (e) => {
+  light.style.opacity = '0.5';
+  if (e.target.classList[0] === 'next_button') {
+    buttonNext.style.opacity = '0.5';
+  } else if (e.target.classList[0] === 'prev_button') {
+    buttonPrev.style.opacity = '0.5';
+  } else if (e.target.classList[0] === 'start_button') {
+    buttonStart.style.opacity = '0.5';
+  }
 }
-const handleChangeColorPrev = () => {
-  prevButton.classList.toggle('click');
-}
-const handleChangeColorNext = () => {
-  nextButton.classList.toggle('click');
+const handleClickUp = (e) => {
+  light.style.opacity = '1';
+  if (e.target.classList[0] === 'next_button') {
+    buttonNext.style.opacity = '1';
+  } else if (e.target.classList[0] === 'prev_button') {
+    buttonPrev.style.opacity = '1';
+  } else if (e.target.classList[0] === 'start_button') {
+    buttonStart.style.opacity = '1';
+  }
 }
 
 //all Event Listeners
 startButton.addEventListener('click', handleStartClick);
-startButton.addEventListener('mousedown', handleChangeColor);
-startButton.addEventListener('mouseup', handleChangeColor);
-prevButton.addEventListener('mousedown', handleChangeColorPrev);
-prevButton.addEventListener('mouseup', handleChangeColorPrev);
-nextButton.addEventListener('mousedown', handleChangeColorNext);
-nextButton.addEventListener('mouseup', handleChangeColorNext);
+window.addEventListener('mousedown', handleClickDown);
+window.addEventListener('mouseup', handleClickUp);
