@@ -32,13 +32,6 @@ const stats = Object.values(pokemonData.stats).map(stat => ({
   base_stat: `${stat.base_stat}`
 }))
 
-// const showImages = spritesList.map(image => {
-//   pokemonImage = document.createElement('img');
-//   pokemonImage.src = image;
-//   pokemonImage.height = '200';
-//   imgsContainer.appendChild(pokemonImage);
-// });
-
 let flag = 0;
 const handlePrevClick = () => {
   if (flag === 0) {
