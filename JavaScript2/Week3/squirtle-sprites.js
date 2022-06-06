@@ -20,11 +20,11 @@ const nextButton = document.querySelector('.next_button');
 
 //Whole data
 const pokemonData = JSON.parse(fetchPokemonData());
-console.log(pokemonData);
+// console.log(pokemonData);
 
 //Sprites
 const spritesList = Object.values(pokemonData.sprites).filter(data => data !== null);
-console.log(spritesList);
+// console.log(spritesList);
 
 //Stats
 const stats = Object.values(pokemonData.stats).map(stat => ({
