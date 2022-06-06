@@ -9,6 +9,7 @@ function fetchPokemonData() {
 }
 
 /* Code goes below */
+
 //Getting DOM elements
 const mainScreen = document.querySelector('.screen');
 const statsScreen = document.querySelector('ul');
@@ -16,7 +17,6 @@ const nameScreen = document.querySelector('.name');
 const startButton = document.querySelector('.start_button');
 const prevButton = document.querySelector('.prev_button');
 const nextButton = document.querySelector('.next_button');
-
 
 //Whole data
 const pokemonData = JSON.parse(fetchPokemonData());
@@ -32,6 +32,7 @@ const stats = Object.values(pokemonData.stats).map(stat => ({
   base_stat: `${stat.base_stat}`
 }))
 
+//handle previous button
 let flag = 0;
 const handlePrevClick = () => {
   if (flag === 0) {
@@ -44,6 +45,7 @@ const handlePrevClick = () => {
   // console.log(flag);
 }
 
+//handle next button
 const handleNextClick = () => {
   if (flag !== spritesList.length - 1) {
     ++flag
@@ -53,6 +55,7 @@ const handleNextClick = () => {
   // console.log(flag);
 }
 
+//handle start button
 const handleStartClick = () => {
   mainScreen.style.backgroundImage = `url("${spritesList[0]}")`
   nameScreen.textContent = `${pokemonData.name}`
@@ -70,6 +73,7 @@ const handleStartClick = () => {
   startButton.removeEventListener('mouseup', handleChangeColor);
 }
 
+//handle changing colors for button while clicking
 const handleChangeColor = () => {
   startButton.classList.toggle('clickStart');
 }
@@ -80,6 +84,7 @@ const handleChangeColorNext = () => {
   nextButton.classList.toggle('click');
 }
 
+//all Event Listeners
 startButton.addEventListener('click', handleStartClick);
 startButton.addEventListener('mousedown', handleChangeColor);
 startButton.addEventListener('mouseup', handleChangeColor);
