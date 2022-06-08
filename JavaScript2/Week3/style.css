@@ -156,6 +156,25 @@
   transition: .2s;
 }
 
+.inputSvg {
+  fill: #fff;
+}
+
+.inputNumber {
+  position: absolute;
+  width: 12%;
+  height: 5%;
+  position: absolute;
+  top: 81.2%;
+  left: 58%;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 12px;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  /* background-color: blue; */
+}
+
 @keyframes flashing {
   to {
     opacity: 0;

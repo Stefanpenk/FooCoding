@@ -17,6 +17,7 @@ const nameScreen = document.querySelector('.name');
 const startButton = document.querySelector('.start_button');
 const prevButton = document.querySelector('.prev_button');
 const nextButton = document.querySelector('.next_button');
+const input = document.querySelector('.inputNumber');
 const r = document.querySelector(':root');
 
 //Getting svg buttons
@@ -74,6 +75,8 @@ const handleStartClick = () => {
   })
   r.style.setProperty('--screenColor', '#fff');
   startButton.style.setProperty('--display', 'none');
+  input.removeAttribute('disabled');
+  input.setAttribute('placeholder', 'write nr')
   prevButton.addEventListener('click', handlePrevClick);
   nextButton.addEventListener('click', handleNextClick);
   startButton.removeEventListener('click', handleStartClick);
@@ -105,3 +108,38 @@ const handleClickUp = (e) => {
 startButton.addEventListener('click', handleStartClick);
 window.addEventListener('mousedown', handleClickDown);
 window.addEventListener('mouseup', handleClickUp);
+
+//all pokemons
+const pokemon = (data) => {
+  const pokemonImgs = Object.values(data.sprites).filter(data => data !== null && typeof data === 'string');
+  mainScreen.style.backgroundImage = `url("${pokemonImgs[0]}")`;
+  nameScreen.textContent = `${data.name}`;
+  const statistics = Object.values(data.stats).map(stat => ({
+    id: `${stat.stat.name}`,
+    base_stat: `${stat.base_stat}`
+  }))
+  statistics.map((stat) => {
+    const li = document.createElement('li');
+    li.classList.add('stat');
+    li.textContent = `${stat.id} : ${stat.base_stat}`
+    statsScreen.appendChild(li);
+  })
+  pokemonImgs.map(img => spritesList.push(img));
+  console.log(statistics);
+  console.log(data);
+}
+
+const number = 1;
+const morePokemons = (e) => {
+  let number = e.target.value;;
+  spritesList.length = 0;
+  statsScreen.innerHTML = '';
+  flag = 0;
+  fetch(`https://pokeapi.co/api/v2/pokemon/${number}`)
+    .then(res => res.json())
+    .then(data => {
+      pokemon(data);
+    })
+}
+
+input.addEventListener('input', morePokemons);
