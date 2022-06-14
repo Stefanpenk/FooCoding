@@ -76,7 +76,10 @@ const handleStartClick = () => {
   r.style.setProperty('--screenColor', '#fff');
   startButton.style.setProperty('--display', 'none');
   input.removeAttribute('disabled');
-  input.setAttribute('placeholder', 'write nr')
+  input.setAttribute('placeholder', 'write nr');
+  startButton.style.animation = 'none';
+  prevButton.style.animation = 'none';
+  nextButton.style.animation = 'none';
   prevButton.addEventListener('click', handlePrevClick);
   nextButton.addEventListener('click', handleNextClick);
   startButton.removeEventListener('click', handleStartClick);

@@ -172,7 +172,6 @@
   outline: none;
   border: none;
   overflow: hidden;
-  /* background-color: blue; */
 }
 
 @keyframes flashing {
