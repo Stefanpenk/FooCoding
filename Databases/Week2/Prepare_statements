@@ -4,10 +4,10 @@ Prepared statements
 PREPARE COUNTRYCAPITAL FROM "SELECT country.Name AS Country, city.Name AS Capital FROM city INNER JOIN country ON capital = city.ID WHERE country.Name = ?";
 
 2)
-PREPARE COUNTRYCAPITAL FROM "SELECT Language, Name FROM countrylanguage l INNER JOIN country c ON c.Code = l.CountryCode WHERE c.name = ?";
+PREPARE REGIONLANGUAGES FROM "SELECT Language, Name FROM countrylanguage l INNER JOIN country c ON c.Code = l.CountryCode WHERE c.name = ?";
 
 3)
-PREPARE COUNTRYCAPITAL FROM "SELECT count(c.Name) AS Cities FROM city c INNER JOIN countrylanguage l ON c.CountryCode = l.CountryCode WHERE l.Language = ?";
+PREPARE CITIESLANGUAGENUMBER FROM "SELECT count(c.Name) AS Cities FROM city c INNER JOIN countrylanguage l ON c.CountryCode = l.CountryCode WHERE l.Language = ?";
 
 4)
-PREPARE COUNTRYCAPITAL FROM "SELECT c.Continent, count(l.Language) AS Languages FROM country c INNER JOIN countrylanguage l ON c.Code = l.CountryCode GROUP BY c.Continent";
+PREPARE CONTINENTSLISTLANUGAGENUMBER FROM "SELECT c.Continent, count(l.Language) AS Languages FROM country c INNER JOIN countrylanguage l ON c.Code = l.CountryCode GROUP BY c.Continent";
