@@ -3,7 +3,7 @@ const mysql = require("mysql2");
 const env = require("dotenv").config();
 
 const PORT = process.env.PORT || 8080;
-const passwordArg = process.env.DB_PASSWORD;
+const password = process.env.DB_PASSWORD;
 const app = express();
 
 app.listen(PORT, () => console.log(`API is running on ${PORT}`));
@@ -11,7 +11,7 @@ app.listen(PORT, () => console.log(`API is running on ${PORT}`));
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: passwordArg,
+  password: password,
   database: "new_world",
 });
 
